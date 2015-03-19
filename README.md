@@ -1,7 +1,7 @@
 # ibm_db smart package
 Packaging [ibm_db](https://www.npmjs.com/package/ibm_db) for [Meteor](https://www.meteor.com/).
 
-##Using
+## Using
 Add this package to your project:
 
 ```sh
@@ -75,7 +75,7 @@ Meteor.methods({
   }
 });
 ```
-Checkout the [ibm_db package documentation](https://www.npmjs.com/package/ibm_db#api) for more details
+Check out the [ibm_db package documentation](https://www.npmjs.com/package/ibm_db#api) for more details
 ## Future work
 Currently this is not a full Meteor implementation (no reactivity, no DDP, etc.), so it can only be used server-side.
 
