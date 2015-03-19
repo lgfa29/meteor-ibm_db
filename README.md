@@ -4,13 +4,13 @@ Packaging [ibm_db](https://www.npmjs.com/package/ibm_db) for [Meteor](https://ww
 ##Using
 Add this package to your project:
 
-```
+```sh
 meteor add laoqui:ibm-db
 ```
 
 Now you can use it to run your queries:
 
-```
+```javascript
 var connString = "DRIVER={DB2};DATABASE=...;HOSTNAME=...;UID=...;PWD=...;PORT=...;PROTOCOL=TCPIP";
 
 if (Meteor.isServer) {
@@ -40,7 +40,7 @@ if (Meteor.isServer) {
   });
 }
 ```
-```
+```javascript
 if (Meteor.isClient) {
   Template.hello.helpers({
     counter: function () {
@@ -58,14 +58,14 @@ if (Meteor.isClient) {
 
 You can also write your method in a blocking/synchrounous way:
 
-```
+```javascript
 Meteor.methods({
   getUserCountSync: function() {
     var count = -1;
     
     try {
       var conn = IBMDB.openSync(connString);
-      var rows = conn.querySync("select count(*) as COUNT from mdl_user");
+      var rows = conn.querySync("select count(*) as COUNT from user");
       count = rows[0]["COUNT"];
     } catch(e) {
       console.log(e);
