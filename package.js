@@ -1,7 +1,7 @@
 Package.describe({
   name: 'laoqui:ibm-db',
   summary: 'Connect to your IBM DB2 or IBM Informix database - Meteor packaging wrapper',
-  version: '0.0.1',
+  version: '0.0.2',
   git: 'https://github.com/lgfa29/meteor-ibm_db.git',
 });
 
@@ -12,5 +12,5 @@ Package.onUse(function(api) {
 });
 
 Npm.depends({
-  'ibm_db': '0.0.8'
+  'ibm_db': '0.0.19'
 });
